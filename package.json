@@ -4,7 +4,7 @@
   "description": "Example webdriver setup",
   "main": "index.js",
   "scripts": {
-    "testWd": "mocha spec/*.spec.coffee --compilers=coffee:coffee-script/register --ui=mocha-fibers --reporter=spec",
+    "testWd": "mocha wd/*.spec.coffee --compilers=coffee:coffee-script/register --ui=mocha-fibers --reporter=spec --timeout=20000",
     "testSeleniumWebdriver": "mocha selenium-webdriver/*.spec.coffee --compilers=coffee:coffee-script/register",
     "test": "npm run testWd & npm run testSeleniumWebdriver"
   },
@@ -26,6 +26,9 @@
     "kexec": "~1.0.0",
     "chai": "~1.10.0",
     "chai-as-promised": "~4.1.1",
-    "mocha": "~2.1.0"
+    "mocha": "~2.1.0",
+    "wd": "~0.3.11",
+    "selenium-standalone": "~2.43.1-5",
+    "tcp-port-used": "~0.1.2"
   }
 }
