@@ -34,8 +34,8 @@ module.exports = class ShoppingSite
           elements[0].click()
           return true
 
-    onSuccess = ->
-    onFailure = (err) -> console.error err
+    onSuccess = -> # no-op, just move on
+    onFailure = -> # no-op, we don't care if the modal's not there
 
     @driver.wait(waitFn, 2000, 'no modal found')
       .then onSuccess, onFailure

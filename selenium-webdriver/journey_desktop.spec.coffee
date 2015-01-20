@@ -21,7 +21,7 @@ scenario 'shopping for multiple days', ->
 
       # add product on 1/23
       @site.filterByDeliveryDay 'Fri 1/23'
-      @site.quickAddProduct 'Organic Brussel Sprouts'
+      @site.quickAddProduct 'Organic Brussels Sprouts'
 
     it 'displays two separate fulfillments on the basket page', ->
       @site.openBasket()
