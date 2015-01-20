@@ -41,6 +41,7 @@ module.exports = class ShoppingSite
       .then onSuccess, onFailure
 
   filterByDeliveryDay: (day) ->
+    @driver.executeScript('window.scrollTo(0,0)')
     @driver.findElement(linkText: day).click()
     @closeModal()
 
