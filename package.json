@@ -4,7 +4,9 @@
   "description": "Example webdriver setup",
   "main": "index.js",
   "scripts": {
-    "test": "mocha spec/*.spec.coffee --compilers=coffee:coffee-script/register --ui=mocha-fibers --reporter=spec"
+    "testWd": "mocha spec/*.spec.coffee --compilers=coffee:coffee-script/register --ui=mocha-fibers --reporter=spec",
+    "testSeleniumWebdriver": "mocha selenium-webdriver/*.spec.coffee --compilers=coffee:coffee-script/register",
+    "test": "npm run testWd & npm run testSeleniumWebdriver"
   },
   "repository": {
     "type": "git",
